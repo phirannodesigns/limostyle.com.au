@@ -15,15 +15,18 @@ dotenv.config({
 });
 
 // Declare variables so these values can be reused
-const title = 'Gatsby Starter Tailwind';
-const siteUrl = 'https://gatsby-starter-tailwindcss.netlify.com';
+const title = 'Cruise In Style Limousines';
+const siteUrl = 'https://www.limostyle.com.au';
 
 module.exports = {
   siteMetadata: {
     title,
-    description: 'Gatsby starter styled with Tailwind.',
-    author: '@luke_bennett_',
+    description:
+      'Cruise in style limousines. Let us roll out the red carpet for you to cruise in style. We cater for all Special Occasions: Weddings, Formals, Anniversaries & Birthdays.',
+    author: '',
     siteUrl,
+    phone: '0423 117 231',
+    email: 'info@limostyle.com.au',
   },
   plugins: [
     'gatsby-plugin-netlify',
@@ -41,13 +44,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Gatsby Starter TailwindCSS',
-        short_name: 'Gatsby Starter',
+        name: title,
+        short_name: 'Limousines',
         start_url: '/',
-        background_color: fullConfig.theme.colors.teal['600'],
-        theme_color: fullConfig.theme.colors.teal['600'],
+        background_color: fullConfig.theme.colors.black,
+        theme_color: fullConfig.theme.colors.black,
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.jpg', // This path is relative to the root of the site.
       },
     },
     {

@@ -4,7 +4,6 @@ import React from 'react';
 import { Error } from './error';
 
 function Input({
-  isFullWidth,
   label,
   name,
   required = true,
@@ -14,9 +13,9 @@ function Input({
 }) {
   const MIN_LENGTH = type === 'tel' ? 8 : 2;
   return (
-    <div className={isFullWidth ? 'sm:col-span-2' : ''}>
+    <div>
       <label htmlFor={name}>
-        <span className="block text-sm font-medium leading-5 text-gray-700">
+        <span className="sr-only">
           {label}
           {required && ' *'}
         </span>
@@ -26,6 +25,7 @@ function Input({
             name={name}
             type={type}
             required={required}
+            placeholder={`${label}${required && ' *'}`}
             aria-invalid={!!errors[name]}
             ref={register({
               required: required && (
@@ -40,7 +40,7 @@ function Input({
                 ),
               },
             })}
-            className="block w-full px-4 py-3 transition duration-150 ease-in-out rounded-none form-input"
+            className="block w-full px-4 py-3 text-black transition duration-150 ease-in-out rounded-none form-input"
           />
         </div>
       </label>
@@ -51,7 +51,6 @@ function Input({
 
 Input.propTypes = {
   errors: PropTypes.object,
-  isFullWidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   register: PropTypes.func.isRequired,

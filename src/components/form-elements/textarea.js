@@ -12,7 +12,7 @@ function TextArea({
   errors,
 }) {
   return (
-    <div className="sm:col-span-2">
+    <div>
       <label htmlFor={name}>
         <span className="block text-sm font-medium leading-5 text-gray-700">
           {label}
