@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { useForm } from 'react-hook-form';
 
+import DatePicker from 'react-datepicker';
 import {
   NetlifyForm,
   Input,
@@ -10,17 +11,22 @@ import {
   Select,
 } from './form-elements';
 
+import 'react-datepicker/dist/react-datepicker.css';
+
 function ContactSection() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const [startDate, setStartDate] = useState(new Date());
+  const [startTime, setStartTime] = useState(new Date());
+
   return (
     <article>
-      <div className="relative max-w-xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
+      <div className="relative max-w-xl px-4 py-24 mx-auto sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl text-center">Book Online Now</h2>
+          <h2 className="text-4xl text-center text-gold">Book Online Now</h2>
         </div>
-        <div className="mt-12">
+        <div className="p-6 mt-12 border border-white">
           <NetlifyForm
             handleSubmit={handleSubmit}
             setIsSubmitting={setIsSubmitting}
@@ -46,11 +52,76 @@ function ContactSection() {
               register={register}
               errors={errors}
             />
+
+            {/* <div className="flex items-center space-x-6">
+              <div className="w-1/2">
+                <p>Date</p>
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  className="px-4 py-3 mt-1 bg-black border border-white"
+                />
+              </div>
+              <div className="w-1/2">
+                <p>Time</p>
+                <DatePicker
+                  selected={startTime}
+                  onChange={(time) => setStartTime(time)}
+                  showTimeSelect
+                  showTimeSelectOnly
+                  timeIntervals={15}
+                  timeCaption="Time"
+                  dateFormat="h:mm aa"
+                  className="px-4 py-3 mt-1 bg-black border border-white"
+                />
+              </div>
+            </div> */}
+            <div className="flex items-center space-x-6">
+              <div className="w-1/2">
+                <p>Date</p>
+                <Input
+                  name="date"
+                  label="Date"
+                  type="date"
+                  register={register}
+                  errors={errors}
+                />
+              </div>
+              <div className="w-1/2">
+                <p>Time</p>
+                <Input
+                  name="time"
+                  label="Time"
+                  type="time"
+                  register={register}
+                  errors={errors}
+                />
+              </div>
+            </div>
+            <Input
+              name="passengers"
+              label="Number of passengers"
+              type="number"
+              register={register}
+              errors={errors}
+            />
             <Select
-              name="subject"
-              label="Subject"
-              defaultValue="Please choose:"
-              options={['First option', 'Second option', 'Third option']}
+              name="vehicle"
+              label="Vehicle"
+              defaultValue="Select your vehicle:"
+              options={['Sedan', 'Bus']}
+              register={register}
+              errors={errors}
+            />
+            <Input
+              name="pickup_location"
+              label="Pickup location"
+              register={register}
+              errors={errors}
+            />
+            <Input
+              name="destination"
+              label="Destination"
               register={register}
               errors={errors}
             />
@@ -65,7 +136,7 @@ function ContactSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium leading-6 text-black transition duration-150 ease-in-out bg-gold rounded-none ${
+                  className={`inline-flex items-center justify-center px-6 py-3 text-base font-medium leading-6 text-black transition duration-150 ease-in-out bg-gold rounded-none ${
                     isSubmitting ? 'opacity-50 cursor-wait' : ''
                   }`}
                 >

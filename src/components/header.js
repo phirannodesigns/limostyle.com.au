@@ -17,7 +17,10 @@ function Header() {
             </Link>
           </div>
           <div className="flex items-center justify-center">
-            <a href="#contact-form" className="px-6 py-2 border-2 border-gold">
+            <a
+              href="#contact-form"
+              className="px-6 py-2 border-2 border-gold text-gold"
+            >
               Book Now
             </a>
           </div>

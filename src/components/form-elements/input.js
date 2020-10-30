@@ -25,13 +25,15 @@ function Input({
             name={name}
             type={type}
             required={required}
+            min={type === 'number' ? '0' : ''}
+            max={type === 'number' ? '50' : ''}
             placeholder={`${label}${required && ' *'}`}
             aria-invalid={!!errors[name]}
             ref={register({
-              required: required && (
+              required: required && type !== 'date' && type !== 'time' && (
                 <Error message={`${label} is a required field`} />
               ),
-              minLength: {
+              minLength: type !== 'number' && {
                 value: MIN_LENGTH,
                 message: (
                   <Error
@@ -40,7 +42,7 @@ function Input({
                 ),
               },
             })}
-            className="block w-full px-4 py-3 text-black transition duration-150 ease-in-out rounded-none form-input"
+            className="block w-full px-4 py-3 text-white placeholder-gray-300 placeholder-opacity-50 transition duration-150 ease-in-out bg-black rounded-none form-input"
           />
         </div>
       </label>

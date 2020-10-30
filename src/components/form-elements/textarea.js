@@ -14,21 +14,18 @@ function TextArea({
   return (
     <div>
       <label htmlFor={name}>
-        <span className="block text-sm font-medium leading-5 text-gray-700">
-          {label}
-          {required && ' *'}
-        </span>
         <div className="relative mt-1 shadow-sm">
           <textarea
             id={name}
             name={name}
             rows={rows}
+            placeholder={`${label}${required && ' *'}`}
             required={required}
             aria-invalid={!!errors[name]}
             ref={register({
               required: <Error message={`${label} is a required field`} />,
             })}
-            className="block w-full px-4 py-3 transition duration-150 ease-in-out rounded-none form-textarea"
+            className="block w-full px-4 py-3 text-white placeholder-gray-300 placeholder-opacity-50 transition duration-150 ease-in-out bg-black rounded-none form-textarea"
           />
         </div>
       </label>

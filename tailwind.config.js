@@ -25,6 +25,7 @@ module.exports = {
       colors: {
         navy: '#000f17',
         gold: '#d69935',
+        cream: '#f3f1f2',
       },
     },
   },
