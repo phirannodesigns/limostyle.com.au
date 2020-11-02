@@ -74,7 +74,9 @@ function Services() {
   return (
     <article className="">
       <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <h2 className="mt-24 text-4xl text-center">Our Services</h2>
+        <h2 className="mt-24 text-4xl text-center font-display">
+          Our Services
+        </h2>
         <div className="grid gap-12 mt-12 mb-24 text-center lg:grid-cols-3">
           {services.map((service) => (
             <div key={service.name} className="">
@@ -100,7 +102,7 @@ function Awards() {
     <article className="text-black bg-cream">
       <div className="w-full px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl">Awards</h2>
+          <h2 className="text-4xl font-bold font-display">Awards</h2>
           <GatsbyImage
             fluid={award1.childImageSharp.fluid}
             className="flex-1 m-auto w-36 h-36"
@@ -125,7 +127,9 @@ function ForAllEnquiries() {
     <article className="text-black bg-cream">
       <div className="w-full px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl uppercase text-gold">For All Enquiries</h2>
+          <h2 className="text-4xl font-bold text-gold font-display">
+            For all Enquiries
+          </h2>
           <div>
             <p className="text-xl leading-tight tracking-wide">
               Please contact us today on{' '}

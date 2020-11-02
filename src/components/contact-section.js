@@ -24,7 +24,9 @@ function ContactSection() {
     <article>
       <div className="relative max-w-xl px-4 py-24 mx-auto sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl text-center text-gold">Book Online Now</h2>
+          <h2 className="text-4xl font-bold text-center text-gold font-display">
+            Book Online Now
+          </h2>
         </div>
         <div className="p-6 mt-12 border border-white">
           <NetlifyForm
@@ -88,7 +90,7 @@ function ContactSection() {
                 />
               </div>
               <div className="w-1/2">
-                <p>Time</p>
+                <p>Time (eg. 11:45 AM)</p>
                 <Input
                   name="time"
                   label="Time"
