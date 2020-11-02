@@ -19,7 +19,7 @@ function Header() {
           <div className="flex items-center justify-center">
             <a
               href="#contact-form"
-              className="px-6 py-2 border-2 border-gold text-gold"
+              className="px-6 py-2 mt-6 border-2 lg:mt-0 border-gold text-gold"
             >
               Book Now
             </a>

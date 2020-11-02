@@ -84,7 +84,7 @@ function Services() {
               <img
                 src={service.icon}
                 alt="service icon"
-                className="m-auto w-36 h-36"
+                className="w-24 h-24 m-auto md:w-36 md:h-36"
               />
               <h3 className="mt-4">{service.name}</h3>
             </div>

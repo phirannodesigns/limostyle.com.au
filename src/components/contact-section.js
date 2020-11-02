@@ -90,7 +90,10 @@ function ContactSection() {
                 />
               </div>
               <div className="w-1/2">
-                <p>Time (eg. 11:45 AM)</p>
+                <p>
+                  Time{' '}
+                  <span className="hidden sm:inline-block">(eg. 11:45 AM)</span>
+                </p>
                 <Input
                   name="time"
                   label="Time"
