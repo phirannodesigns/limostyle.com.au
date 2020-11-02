@@ -74,10 +74,10 @@ function Services() {
   return (
     <article className="">
       <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <h2 className="mt-24 text-4xl text-center font-display">
+        <h2 className="mt-12 text-4xl text-center font-display">
           Our Services
         </h2>
-        <div className="grid gap-12 mt-12 mb-24 text-center lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-12 mt-12 mb-24 text-center lg:grid-cols-3">
           {services.map((service) => (
             <div key={service.name} className="">
               {/* <service.icon className="w-36 h-36" /> */}
@@ -131,7 +131,7 @@ function ForAllEnquiries() {
             For all Enquiries
           </h2>
           <div>
-            <p className="text-xl leading-tight tracking-wide">
+            <p className="text-base leading-tight tracking-wide sm:text-xl">
               Please contact us today on{' '}
               <a
                 className="font-bold"

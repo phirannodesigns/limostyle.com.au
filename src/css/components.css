@@ -8,6 +8,11 @@
   --reach-dialog: 1;
 }
 
+/* Use CSS smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* See https://piccalil.li/quick-tip/a-safer-way-to-vertically-fill-the-viewport/ for details */
 html,
 body,

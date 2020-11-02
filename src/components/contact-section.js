@@ -21,8 +21,8 @@ function ContactSection() {
   const [startTime, setStartTime] = useState(new Date());
 
   return (
-    <article>
-      <div className="relative max-w-xl px-4 py-24 mx-auto sm:px-6 lg:px-8">
+    <article id="contact-form">
+      <div className="relative max-w-xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-center text-gold font-display">
             Book Online Now

@@ -23,7 +23,7 @@ function Hero() {
   );
   return (
     <article className="bg-gold">
-      <div className="w-full mx-auto max-w-7xl">
+      <div className="w-full">
         <div className="relative h-0 aspect-ratio-16/9">
           <div className="absolute inset-0 flex">
             <GatsbyImage
