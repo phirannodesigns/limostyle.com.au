@@ -14,10 +14,25 @@ module.exports = {
     aspectRatio: {
       none: 0,
       square: [1, 1],
-      '16/9': [16, 9],
       '4/3': [4, 3],
+      '16/9': [16, 9],
       '21/9': [21, 9],
     },
+    typography: (theme) => ({
+      default: {
+        css: {
+          a: {
+            color: theme('colors.gold'),
+          },
+          'ol > li:before': {
+            color: theme('colors.gold'),
+          },
+          'ul > li:before': {
+            backgroundColor: theme('colors.gold'),
+          },
+        },
+      },
+    }),
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
