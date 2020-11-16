@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import { Logo } from './vectors';
+import { useGraphQL } from '../hooks';
 
 function Footer() {
+  const data = useGraphQL();
+  const { siteMetadata } = data.site;
   return (
     <footer className="bg-navy">
       <div className="max-w-screen-xl px-4 py-12 mx-auto overflow-hidden sm:px-6 lg:px-8">
@@ -13,16 +16,18 @@ function Footer() {
 
         <ul className="mt-8 space-y-1 text-lg text-center">
           <li className="py-1 tracking-wide">
-            <a href="tel:0423117231">0423 117 231</a>
+            <a href={`tel:${siteMetadata.phone.split(' ').join('')}`}>
+              {siteMetadata.phone}
+            </a>
           </li>
           <li className="py-1 tracking-wide">
-            <a href="mailto:info@limostyle.com.au">info@limostyle.com.au</a>
+            <a href={`mailto:${siteMetadata.email}`}>{siteMetadata.email}</a>
           </li>
           <li className="py-1 tracking-wide">
             <p>Located in Port Macquarie</p>
           </li>
           <li className="py-1 tracking-wide">
-            <p>Accreditation Number: 34618</p>
+            <p>Accreditation Number: {siteMetadata.accreditationNumber}</p>
           </li>
         </ul>
         <a

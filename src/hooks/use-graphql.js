@@ -20,9 +20,10 @@ function useGraphQL() {
       {
         site {
           siteMetadata {
-            title
-            phone
+            accreditationNumber
             email
+            phone
+            title
           }
         }
       }

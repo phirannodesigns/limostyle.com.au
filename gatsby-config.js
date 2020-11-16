@@ -27,6 +27,7 @@ module.exports = {
     siteUrl,
     phone: '0423 117 231',
     email: 'info@limostyle.com.au',
+    accreditationNumber: '34618',
   },
   plugins: [
     'gatsby-plugin-netlify',
