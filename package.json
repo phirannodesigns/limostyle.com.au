@@ -6,8 +6,6 @@
   "author": "Luke Bennett <l.bennett@phirannodesigns.com.au>",
   "license": "MIT",
   "dependencies": {
-    "@reach/dialog": "^0.11.2",
-    "@tailwindcss/typography": "^0.2.0",
     "@tailwindcss/ui": "^0.6.2",
     "autoprefixer": "^9.8.6",
     "dotenv": "^8.2.0",
@@ -31,7 +29,6 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.9.6",
-    "react-spring": "^8.0.27",
     "tailwindcss": "^1.9.6",
     "tailwindcss-aspect-ratio": "^3.0.0",
     "typeface-inter": "^1.1.13"
