@@ -21,7 +21,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        display: ['aviano-royale', ...defaultTheme.fontFamily.sans],
+        display: ['Aviano Royale', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         navy: '#000f17',
