@@ -123,11 +123,7 @@ function Service({ services, theme }) {
             key={service.heading}
             className="flex flex-col items-center max-w-md mx-auto"
           >
-            <service.icon className="w-24 h-24 md:w-36 md:h-36" />
-            <h3 className="mt-4 text-xl font-bold">
-              {service.heading} <br />
-              <span className="italic">{service.subheading}</span>
-            </h3>
+            <service.icon className="w-24 h-24 fill-current text-gold md:w-36 md:h-36" />
             <div
               dangerouslySetInnerHTML={{ __html: service.copy }}
               className={`mt-8 prose ${
