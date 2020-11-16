@@ -1,17 +1,19 @@
 import React from 'react';
-import GatsbyImage from 'gatsby-image';
 
 import { ContactSection, Hero, Layout, SEO } from '../components';
 import { useGraphQL } from '../hooks';
-import airport from '../images/001-airport.svg';
-import destination from '../images/003-destination-1.svg';
-import bus from '../images/002-school-bus.svg';
-import tours from '../images/004-trees.svg';
-import funerals from '../images/005-candle.svg';
-import wine from '../images/003-wine.svg';
-import tray from '../images/010-tray.svg';
-import rings from '../images/008-wedding-rings.svg';
-import formal from '../images/006-necktie.svg';
+import {
+  AirportIcon,
+  DestinationIcon,
+  SchoolBusIcon,
+  TreesIcon,
+  CandleIcon,
+  WineIcon,
+  TrayIcon,
+  WeddingRingsIcon,
+  NecktieIcon,
+  QualityIcon,
+} from '../components/vectors';
 
 function IndexPage() {
   return (
@@ -23,6 +25,7 @@ Weddings - Wine Tours - All Occasions"
       <Hero />
       <Services />
       <Awards />
+      <Testimonials />
       <ContactSection />
       <ForAllEnquiries />
     </Layout>
@@ -32,40 +35,31 @@ Weddings - Wine Tours - All Occasions"
 function Services() {
   const services = [
     {
-      name: 'Restaurant Transfers',
-      icon: tray,
+      icon: TrayIcon,
     },
     {
-      name: 'Wine & Brewery Tours',
-      icon: wine,
+      icon: WineIcon,
     },
     {
-      name: 'Scenic Tours',
-      icon: tours,
+      icon: TreesIcon,
     },
     {
-      name: 'Funerals',
-      icon: funerals,
+      icon: CandleIcon,
     },
     {
-      name: 'Weddings',
-      icon: rings,
+      icon: WeddingRingsIcon,
     },
     {
-      name: 'Formals',
-      icon: formal,
+      icon: NecktieIcon,
     },
     {
-      name: 'Airport Shuttle Bus Service',
-      icon: bus,
+      icon: SchoolBusIcon,
     },
     {
-      name: 'Airport Transfers',
-      icon: airport,
+      icon: AirportIcon,
     },
     {
-      name: 'General Transport to any Destination',
-      icon: destination,
+      icon: DestinationIcon,
     },
   ];
 
@@ -77,12 +71,7 @@ function Services() {
         </h2>
         <div className="grid grid-cols-2 gap-12 mt-12 mb-24 text-center lg:grid-cols-3">
           {services.map((service) => (
-            <div key={service.name} className="">
-              {/* <service.icon className="w-36 h-36" /> */}
-              <img
-                src={service.icon}
-                alt="service icon"
-                className="w-24 h-24 m-auto md:w-36 md:h-36"
+              <service.icon className="w-24 h-24 m-auto md:w-36 md:h-36" />
               />
               <h3 className="mt-4">{service.name}</h3>
             </div>
@@ -101,10 +90,7 @@ function Awards() {
       <div className="w-full px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-4xl font-bold font-display">Awards</h2>
-          <GatsbyImage
-            fluid={award1.childImageSharp.fluid}
-            className="flex-1 m-auto w-36 h-36"
-          />
+          <QualityIcon className="flex-1 m-auto fill-current w-36 h-36" />
           <div>
             <p className="text-xl font-semibold leading-none tracking-wide">
               Customer Car Service Excellence <br />
