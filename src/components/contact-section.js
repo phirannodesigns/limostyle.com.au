@@ -41,8 +41,8 @@ function ContactSection() {
               register={register}
               errors={errors}
             />
-            <div className="flex items-center space-x-6">
-              <div className="w-1/2">
+            <div className="grid grid-cols-2 gap-6">
+              <div>
                 <p>Date</p>
                 <Input
                   name="date"
@@ -52,7 +52,7 @@ function ContactSection() {
                   errors={errors}
                 />
               </div>
-              <div className="w-1/2">
+              <div>
                 <p>
                   Time{' '}
                   <span className="hidden sm:inline-block">(eg. 11:45 AM)</span>
