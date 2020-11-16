@@ -1,24 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import { useForm } from 'react-hook-form';
 
-import DatePicker from 'react-datepicker';
-import {
-  NetlifyForm,
-  Input,
-  TextArea,
-  Checkbox,
-  Select,
-} from './form-elements';
-
-import 'react-datepicker/dist/react-datepicker.css';
+import { NetlifyForm, Input, TextArea, Select } from './form-elements';
 
 function ContactSection() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const [startDate, setStartDate] = useState(new Date());
-  const [startTime, setStartTime] = useState(new Date());
 
   return (
     <article id="contact-form">
@@ -54,30 +41,6 @@ function ContactSection() {
               register={register}
               errors={errors}
             />
-
-            {/* <div className="flex items-center space-x-6">
-              <div className="w-1/2">
-                <p>Date</p>
-                <DatePicker
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                  className="px-4 py-3 mt-1 bg-black border border-white"
-                />
-              </div>
-              <div className="w-1/2">
-                <p>Time</p>
-                <DatePicker
-                  selected={startTime}
-                  onChange={(time) => setStartTime(time)}
-                  showTimeSelect
-                  showTimeSelectOnly
-                  timeIntervals={15}
-                  timeCaption="Time"
-                  dateFormat="h:mm aa"
-                  className="px-4 py-3 mt-1 bg-black border border-white"
-                />
-              </div>
-            </div> */}
             <div className="flex items-center space-x-6">
               <div className="w-1/2">
                 <p>Date</p>
@@ -136,6 +99,12 @@ function ContactSection() {
               register={register}
               errors={errors}
             />
+            <p className="leading-tight">
+              <small>
+                * Please note: this is only a provisional enquiry. All bookings
+                will need to be confirmed by return email.
+              </small>
+            </p>
             <div>
               <span className="inline-flex w-full shadow-sm">
                 <button
