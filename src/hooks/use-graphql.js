@@ -21,6 +21,7 @@ function useGraphQL() {
         site {
           siteMetadata {
             accreditationNumber
+            description
             email
             phone
             siteUrl

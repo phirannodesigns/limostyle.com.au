@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import { Logo } from './vectors';
+import { useGraphQL } from '../hooks';
 
 function Header() {
+  const data = useGraphQL();
+  const { siteMetadata } = data.site;
   return (
     <nav className="sticky top-0 z-20 py-12 bg-black">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -13,6 +16,7 @@ function Header() {
               to="/"
               className="flex items-center flex-shrink-0 transition duration-150 ease-in-out rounded"
             >
+              <span className="sr-only">{siteMetadata.title}</span>
               <Logo className="w-full fill-current" />
             </Link>
           </div>
