@@ -13,7 +13,7 @@ function Select({
   required = true,
 }) {
   return (
-    <div>
+    <label htmlFor={name}>
       <span className="sr-only">
         {label}
         {required && ' *'}
@@ -45,7 +45,7 @@ function Select({
         </select>
       </div>
       {errors[name]?.message}
-    </div>
+    </label>
   );
 }
 
