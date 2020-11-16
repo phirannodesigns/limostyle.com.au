@@ -35,7 +35,7 @@ module.exports = {
     }),
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
         display: ['Aviano Royale', ...defaultTheme.fontFamily.sans],
       },
       colors: {
