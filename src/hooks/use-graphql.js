@@ -23,6 +23,7 @@ function useGraphQL() {
             accreditationNumber
             email
             phone
+            siteUrl
             title
           }
         }

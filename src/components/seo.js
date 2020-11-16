@@ -8,24 +8,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useLocation } from '@reach/router';
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
+import { useGraphQL } from '../hooks';
 
-  const metaDescription = description || site.siteMetadata.description;
+function SEO({
+  description = '',
+  image,
+  type,
+  lang = 'en-AU',
+  meta = [],
+  title,
+}) {
+  const {
+    site: { siteMetadata },
+  } = useGraphQL();
+
+  const { pathname } = useLocation();
+
+  const metaDescription = description || siteMetadata.description;
+  const metaType = type || 'website';
+  const metaUrl = `${siteMetadata.siteUrl}${pathname}`;
+  const metaImage = image || `${siteMetadata.siteUrl}/og-image.jpg`;
 
   return (
     <Helmet
@@ -33,38 +37,46 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${siteMetadata.title}`}
       meta={[
         {
-          name: `description`,
+          name: 'description',
           content: metaDescription,
         },
         {
-          property: `og:title`,
+          property: 'og:title',
           content: title,
         },
         {
-          property: `og:description`,
+          property: 'og:description',
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:type',
+          content: metaType,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          property: 'og:url',
+          content: metaUrl,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          property: 'og:image',
+          content: metaImage,
         },
         {
-          name: `twitter:title`,
+          name: 'twitter:card',
+          content: 'summary',
+        },
+        {
+          name: 'twitter:creator',
+          content: siteMetadata.author,
+        },
+        {
+          name: 'twitter:title',
           content: title,
         },
         {
-          name: `twitter:description`,
+          name: 'twitter:description',
           content: metaDescription,
         },
       ].concat(meta)}
@@ -72,14 +84,10 @@ function SEO({ description, lang, meta, title }) {
   );
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-};
-
 SEO.propTypes = {
   description: PropTypes.string,
+  image: PropTypes.string,
+  type: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,

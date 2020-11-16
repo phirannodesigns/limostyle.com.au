@@ -6,6 +6,7 @@
   "author": "Luke Bennett <l.bennett@phirannodesigns.com.au>",
   "license": "MIT",
   "dependencies": {
+    "@reach/router": "^1.3.4",
     "@tailwindcss/ui": "^0.6.2",
     "autoprefixer": "^9.8.6",
     "dotenv": "^8.2.0",
