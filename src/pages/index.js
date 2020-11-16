@@ -1,10 +1,8 @@
 import React from 'react';
-
 import GatsbyImage from 'gatsby-image';
 
 import { ContactSection, Hero, Layout, SEO } from '../components';
 import { useGraphQL } from '../hooks';
-
 import airport from '../images/001-airport.svg';
 import destination from '../images/003-destination-1.svg';
 import bus from '../images/002-school-bus.svg';
