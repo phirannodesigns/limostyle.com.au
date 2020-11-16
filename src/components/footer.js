@@ -1,16 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { useGraphQL } from '../hooks';
-
 import { Logo } from './vectors';
 
 function Footer() {
-  const {
-    site: {
-      siteMetadata: { title },
-    },
-  } = useGraphQL();
   return (
     <footer className="bg-navy">
       <div className="max-w-screen-xl px-4 py-12 mx-auto overflow-hidden sm:px-6 lg:px-8">
