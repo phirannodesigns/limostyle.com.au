@@ -15,6 +15,7 @@ function TextArea({
     <div>
       <label htmlFor={name}>
         <div className="relative mt-1 shadow-sm">
+          <span className="sr-only">{`${label}${required && ' *'}`}</span>
           <textarea
             id={name}
             name={name}
