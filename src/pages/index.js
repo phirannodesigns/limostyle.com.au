@@ -83,7 +83,7 @@ const services2 = [
     <p>Red Carpet Service</p>
     <p>Wheel Cover to protect dresses</p>
     <p>White Wedding Ribbon and Tulle</p>
-    <p>3 Hours hire 13 seater mini bus from $880</p>
+    <p>3 hour hire 13 seater mini bus from $880</p>
     <p>Get away after reception to accommodation of your choice in the local area from $150</p>
     `,
   },
@@ -167,7 +167,7 @@ function Awards() {
           <QualityIcon className="flex-1 m-auto fill-current w-36 h-36" />
           <div>
             <p className="mt-4 text-xl font-semibold leading-none tracking-wide">
-              Customer Car Service Excellence <br />
+              Customer Care Service Excellence <br />
               Awarded in 2009
             </p>
           </div>
@@ -250,7 +250,7 @@ function ForAllEnquiries() {
           </h2>
           <div>
             <p className="text-base leading-tight tracking-wide sm:text-xl">
-              Please contact us today on{' '}
+              Please contact us on{' '}
               <a
                 className="font-bold hover:underline"
                 href={`tel:${siteMetadata.phone.split(' ').join('')}`}

@@ -33,7 +33,7 @@ function Footer() {
             </a>
           </li>
           <li className="py-1 tracking-wide">
-            <p>Located in Port Macquarie</p>
+            <p>Port Macquarie NSW</p>
           </li>
           <li className="py-1 tracking-wide">
             <p>Accreditation Number: {siteMetadata.accreditationNumber}</p>
