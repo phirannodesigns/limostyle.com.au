@@ -10,8 +10,8 @@ function Header() {
   return (
     <nav className="sticky top-0 z-20 py-12 bg-black">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="grid items-center justify-center lg:grid-cols-6">
-          <div className="lg:col-start-2 lg:col-span-4">
+        <div className="items-center justify-center lg:gap-4 lg:grid lg:grid-cols-6">
+          <div className="w-full max-w-3xl mx-auto lg:col-start-2 lg:col-span-4">
             <Link
               to="/"
               className="flex items-center flex-shrink-0 transition duration-150 ease-in-out rounded"
