@@ -9,7 +9,7 @@ function Hero() {
         file(relativePath: { eq: "hero.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

@@ -33,7 +33,6 @@ module.exports = {
     'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-robots-txt',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
     {
@@ -62,6 +61,14 @@ module.exports = {
           tailwindcss(tailwindConfig),
           autoprefixer,
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 90,
       },
     },
     {
