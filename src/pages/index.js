@@ -228,7 +228,7 @@ function Testimonials() {
           <h2 className="text-4xl font-bold font-display">Testimonials</h2>
           <div className="grid gap-12 mt-8 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
-              <Testimonial testimonial={testimonial} />
+              <Testimonial key={testimonial.name} testimonial={testimonial} />
             ))}
           </div>
         </div>
