@@ -37,57 +37,55 @@ Weddings - Wine Tours - All Occasions"
 const services1 = [
   {
     heading: 'Restaurant Transfers',
-    subheading: 'from $290 per couple',
     icon: TrayIcon,
-    copy: `<p>Limousine Return Transfer to the <a href="https://www.cassegrainwines.com.au/">Restaurant at Cassegrain Winery</a> with a bottle of Champagne, bottled water and Red Carpet Service.</p>
-    <p>At the Restaurant you will enjoy a 3 course meal with a bottle of Cassegrain Premium Red or White Wine.</p>
-    <p>Cassegrain Restaurant Package also available.</p>`,
+    copy: `
+    <p>Local area from $30</p>
+    `,
   },
   {
     heading: 'Wine & Brewery Tours',
-    subheading: 'from $110 per person*',
     icon: WineIcon,
-    copy: `<p>We offer a variety of Scenic, Wine and Brewery Tours. Spoil yourself today with a Cruise in Style Tour.</p>
-    <p>Departs Daily from 10am (5 hour pmousine Tour).</p>
-    <p>The Little Brewing Company, Cassegrain Wines &amp; Innes Lake Vineyards.</p>
-    <p>*Must have a min of 4 adults to run the Tour.</p>`,
+    copy: `
+    <p>4 hours from $99 per person</p>
+    <p>5 hours from $110 per person</p>
+    <p>Sedan or Bus</p>
+    `,
   },
   {
     heading: 'Scenic Day Tours',
-    subheading: 'from $99 per adult',
     icon: TreesIcon,
-    copy: `<p>Travel along Pacific Drive to Flynn's Beach, Tacking Point Lighthouse and on to Lake Cathie, Bonny Hills, Camden Haven, Laurieton and Dunbogan. Here we stop for Champagne, Cheese & Biscuits and Sandwiches before returning home.</p>
-    <p>Departing Daily from 10am.</p>
-    <p>Pick up & return from all accommodation
-    Minimum of 6 Adults.</p>`,
+    copy: `
+    <p>4 hours from $99 per person</p>
+    <p>Sedan or Bus</p>
+    `,
   },
 ];
 
 const services2 = [
   {
+    heading: 'Airport Transfers',
+    icon: AirportIcon,
+    copy: `
+    <p>Cruise in Style Limousines is now offering Airport Transfers to all connecting flights, to and from Port Macquarie from $20</p>
+    `,
+  },
+  {
     heading: 'Airport Shuttle Bus Service',
-    subheading: 'from $10',
     icon: SchoolBusIcon,
     copy: `<p>Cruise in Style Limousines is now offering an Airport Shuttle Service to all connecting flights to and from Port Macquarie. We pick you up and drop you off at your accommodation. Choice of Sedan or Shuttle Bus.</p>
     <p>Now servicing the Coffs Harbour coast area.</p>`,
   },
   {
-    heading: 'Airport Transfers',
-    icon: AirportIcon,
-    copy: `<p>Cruise in Style Limousines is now offering Airport Transfers to all connecting flights, to and from Port Macquarie.</p>`,
-  },
-  {
     heading: 'Weddings',
     icon: WeddingRingsIcon,
-    copy: `<p>3 Hour Wedding Package from $880</p>
-    <p>4 Hour Wedding Package from $990</p>
-    <p>Let us help you to make your special day a memorable experience.</p>
-    <p>9 seater Limousine hire.</p>
-    <p>Red Carpet Service.</p>
-    <p>Wheel cover to protect dresses.</p>
-    <p>White Wedding ribbon and tulle.</p>
-    <p>Complementary Champagne, Beer, Soft Drinks, Bottled Water, Cheese and Biscuits, Tissues and Refresher Towels.</p>
-    <p>Get away after reception to accommodation of your choice in the local area.</p>`,
+    copy: `
+    <p>3 Hour hire Chrysler Sedan from $550</p>
+    <p>Red Carpet Service</p>
+    <p>Wheel Cover to protect dresses</p>
+    <p>White Wedding Ribbon and Tulle</p>
+    <p>3 Hours hire 13 seater mini bus from $880</p>
+    <p>Get away after reception to accommodation of your choice in the local area from $150</p>
+    `,
   },
 ];
 
@@ -121,8 +119,13 @@ function Service({ services, theme }) {
           >
             <service.icon className="w-24 h-24 fill-current text-gold md:w-36 md:h-36" />
             <h3 className="mt-4 text-xl font-bold">
-              {service.heading} <br />
-              <span className="italic">{service.subheading}</span>
+              {service.heading}{' '}
+              {service.subheading && (
+                <>
+                  <br />
+                  <span className="italic">{service.subheading}</span>
+                </>
+              )}
             </h3>
             <div
               dangerouslySetInnerHTML={{ __html: service.copy }}
