@@ -42,7 +42,7 @@ function Input({
                 ),
               },
             })}
-            className="block w-full px-4 py-3 text-white placeholder-gray-300 placeholder-opacity-50 transition duration-150 ease-in-out bg-black rounded-none form-input"
+            className="block w-full h-12 px-4 py-3 text-white placeholder-gray-300 placeholder-opacity-50 transition duration-150 ease-in-out bg-black rounded-none form-input"
           />
         </div>
       </label>

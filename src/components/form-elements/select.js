@@ -28,7 +28,7 @@ function Select({
                 <Error message={`${label} is a required field`} />
               ),
             })}
-            className="block w-full px-4 py-3 text-white placeholder-gray-400 placeholder-opacity-50 transition duration-150 ease-in-out bg-black rounded-none form-select"
+            className="block w-full h-12 px-4 py-3 text-white placeholder-gray-400 placeholder-opacity-50 transition duration-150 ease-in-out bg-black rounded-none form-select"
           >
             {defaultValue !== '' && (
               <option value="" disabled>
