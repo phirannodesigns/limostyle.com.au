@@ -83,7 +83,6 @@ const services2 = [
     <p>Red Carpet Service</p>
     <p>Wheel Cover to protect dresses</p>
     <p>White Wedding Ribbon and Tulle</p>
-    <p>3 hour hire 8 seater mini bus from $660.00</p>
     <p>Get away after reception to accommodation of your choice in the local area from $150</p>
     `,
   },
