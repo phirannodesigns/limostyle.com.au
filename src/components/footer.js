@@ -40,12 +40,12 @@ function Footer() {
           </li>
         </ul>
         <a
-          href="https://www.phirannodesigns.com.au/"
+          href="https://pd.design"
           target="_blank"
           rel="noreferrer"
           className="block mt-8 text-lg leading-8 tracking-wide text-center hover:underline"
         >
-          Website by Phiranno Designs
+          Designed and developed by PD
         </a>
       </div>
     </footer>
