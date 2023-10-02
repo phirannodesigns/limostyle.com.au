@@ -77,7 +77,7 @@ function ContactSection() {
               name="vehicle"
               label="Vehicle"
               defaultValue="Select your vehicle:"
-              options={['Sedan', 'Bus']}
+              options={['Sedan']}
               register={register}
               errors={errors}
             />

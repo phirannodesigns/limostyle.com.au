@@ -1,6 +1,7 @@
 export * from './airport-icon';
 export * from './calendar-icon';
 export * from './candle-icon';
+export * from './car-icon';
 export * from './clock-icon';
 export * from './destination-icon';
 export * from './necktie-icon';

@@ -8,6 +8,7 @@ import {
   AirportIcon,
   DestinationIcon,
   SchoolBusIcon,
+  CarIcon,
   TreesIcon,
   CandleIcon,
   WineIcon,
@@ -48,7 +49,7 @@ const services1 = [
     copy: `
     <p>4 hours from $99 per person</p>
     <p>5 hours from $110 per person</p>
-    <p>Sedan or Bus</p>
+    <p>Sedan</p>
     `,
   },
   {
@@ -56,7 +57,7 @@ const services1 = [
     icon: TreesIcon,
     copy: `
     <p>4 hours from $99 per person</p>
-    <p>Sedan or Bus</p>
+    <p>Sedan</p>
     `,
   },
 ];
@@ -70,9 +71,9 @@ const services2 = [
     `,
   },
   {
-    heading: 'Airport Shuttle Bus Service',
-    icon: SchoolBusIcon,
-    copy: `<p>Cruise in Style Limousines is now offering an Airport Shuttle Service to all connecting flights to and from Port Macquarie. We pick you up and drop you off at your accommodation. Choice of Sedan or Shuttle Bus.</p>
+    heading: 'Airport Service',
+    icon: CarIcon,
+    copy: `<p>Cruise in Style Limousines is now offering an Airport Shuttle Service to all connecting flights to and from Port Macquarie. We pick you up and drop you off at your accommodation.</p>
     <p>Now servicing the Coffs Harbour coast area.</p>`,
   },
   {
